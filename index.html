@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FMC 18</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#accueil">
+                        <img src="./public/logo.png" alt="FMC 18 - Logo" loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="#atelier">
+                        L'atelier
+                    </a>
+                </li>
+                <li>
+                    <a href="#equipe">
+                        L'équipe
+                    </a>
+                </li>
+                <li>
+                    <a href="#realisation">
+                        Nos réalisations
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        Nous contacter
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="accueil">
+
+        </section>
+        <section id="atelier">
+            <h2>
+                L'atelier
+            </h2>
+        </section>
+        <section id="equipe">
+            <h2>
+                L'équipe
+            </h2>
+        </section>
+        <section id="realisation">
+            <h2>
+                Nos réalisations
+            </h2>
+        </section>
+        <section id="contact">
+            <h2>
+                Nous contacter
+            </h2>
+            <form>
+                <div>
+                    <label for="nom">Nom</label>
+                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
+                </div>
+                <div>
+                    <label for="societe">Société</label>
+                    <input type="text" name="societe" id="societe" placeholder="Société" required>
+                </div>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="email@email.com" required>
+                </div>
+                <div>
+                    <label for="sujet">Sujet</label>
+                    <input type="text" name="sujet" id="sujet" placeholder="sujet" required>
+                </div>
+                <div>
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        FMC18 - <script>document.write(/\d{4}/.exec(Date())[0])</script>
+    </footer>
+</body>
+</html>
