@@ -533,6 +533,9 @@ a {
 .text-jumbo {
   font-size: 64px !important; }
 
+.text-bold {
+  font-weight: bold; }
+
 h1 {
   font-size: 64px; }
 
@@ -614,7 +617,7 @@ header {
     width: 100%;
     overflow: hidden;
     background-color: #FFFFFF !important; }
-    header nav a {
+    header nav a, header nav button {
       padding: 8px 16px;
       float: left;
       width: auto;
@@ -624,8 +627,10 @@ header {
       white-space: normal;
       text-decoration: none;
       transition: .5s; }
-      header nav a:hover {
-        background-color: #F2E9AE; }
+      header nav a:hover, header nav button:hover {
+        background-color: #f2e9ae8c; }
+    header nav button {
+      background-color: transparent; }
     header nav ul {
       display: flex; }
 
@@ -640,7 +645,7 @@ header {
   color: #000000;
   position: relative;
   animation: animateleft 0.4s; }
-  .sidebar a {
+  .sidebar a, .sidebar button {
     width: 100%;
     display: block;
     padding: 8px 16px;
@@ -652,8 +657,10 @@ header {
     white-space: normal;
     text-decoration: none;
     transition: .5s; }
-    .sidebar a:hover {
+    .sidebar a:hover, .sidebar button:hover {
       color: #FFFFFF; }
+  .sidebar button {
+    background-color: transparent; }
 
 @keyframes animateleft {
   from {
@@ -674,14 +681,6 @@ footer {
     footer a:hover {
       background-color: #F2E9AE !important; }
 
-.modal-content {
-  margin: auto;
-  background-color: #fff;
-  position: relative;
-  padding: 0;
-  outline: 0;
-  width: 600px; }
-
 .modal {
   z-index: 3;
   display: none;
@@ -692,14 +691,15 @@ footer {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.9); }
   .modal span {
-    font-size: 36px !important;
+    color: #FFFFFF;
+    font-size: 48px !important;
     padding: 0 24px !important;
     position: absolute;
     right: 0;
-    top: 0; }
+    top: 0;
+    background-color: unset; }
   .modal .modal-content {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -721,8 +721,9 @@ footer {
       max-width: 100%;
       height: auto; }
     .modal .modal-content p {
+      color: #FFFFFF;
       font-size: 18px;
-      opacity: 0.60; }
+      opacity: 0.8; }
 
 @media (max-width: 600px) {
   .modal-content {
@@ -735,7 +736,7 @@ footer {
   .modal-content {
     width: 500px; }
   .modal {
-    padding-top: 50px; } }
+    padding-top: 100px; } }
 
 @media (min-width: 993px) {
   .modal-content {
@@ -744,18 +745,27 @@ footer {
 section#home {
   background-position: center;
   background-size: cover;
+  background-image: url("../public/banner.jpg");
   background-color: #75B3E4;
   min-height: 100%;
   position: relative;
   filter: grayscale(50%); }
-  section#home div {
+  section#home div.container {
     position: absolute;
     top: 50%;
     left: 0%;
     transform: translate(0%, -50%);
     -ms-transform: translate(0%, -50%);
     padding: 48px;
-    color: #FFFFFF; }
+    color: #2b2b2b;
+    height: 100%;
+    background-color: #ffffff5c; }
+    section#home div.container div.col {
+      display: flex;
+      flex-direction: column;
+      height: 100%; }
+      section#home div.container div.col h1, section#home div.container div.col .h1 {
+        margin-top: auto; }
   section#home a {
     opacity: 0.60;
     transition: .5s;
@@ -763,11 +773,11 @@ section#home {
     color: #000000; }
     section#home a:hover {
       opacity: 1;
-      background-color: #F2E9AE; }
+      background-color: #75B3E4; }
 
 section#about {
   padding: 64px 16px;
-  background-color: #F2E9AE; }
+  background-color: #fcf7d8ae; }
   section#about ul {
     display: flex;
     flex-direction: row;
@@ -803,7 +813,8 @@ section#about::after, section#about::before, section#about .row::after, section#
     width: 24.99999%; } }
 
 section#team {
-  padding: 64px 16px; }
+  padding: 64px 16px;
+  background-color: #f2e9ae8c; }
   section#team ul {
     margin-top: 64px; }
     section#team ul li {
@@ -811,7 +822,7 @@ section#team {
       float: left;
       width: 100%; }
       section#team ul li .card {
-        background-color: #8FAEC7;
+        background-color: #8faec79f;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
         section#team ul li .card div {
           padding: 0.01em 16px;
@@ -820,13 +831,13 @@ section#team {
           clear: both; }
           section#team ul li .card div .opacity {
             opacity: 0.60; }
-          section#team ul li .card div button {
+          section#team ul li .card div button, section#team ul li .card div a {
             display: block;
             width: 100%;
             background-color: #FFFFFF;
             transition: .5; }
-            section#team ul li .card div button:hover {
-              background-color: grey; }
+            section#team ul li .card div button:hover, section#team ul li .card div a:hover {
+              background-color: #F2E9AE; }
       section#team ul li button {
         margin-top: 16px;
         transition: .5s; }
@@ -849,7 +860,7 @@ section#team ul::before {
 
 section#stats {
   padding: 64px 16px !important;
-  background-color: #F2E9AE; }
+  background-color: #fcf7d8ae; }
   section#stats ul li {
     padding: 0 8px;
     float: left;
@@ -872,7 +883,8 @@ section#stats ul::before {
   clear: both; }
 
 section#work {
-  padding: 64px 16px; }
+  padding: 64px 16px;
+  background-color: #f2e9ae8c; }
   section#work ul {
     display: flex;
     flex-direction: row;
@@ -884,7 +896,10 @@ section#work {
     section#work ul li {
       padding: 0 8px;
       float: left;
-      width: 100%; }
+      width: 100%;
+      margin-bottom: 16px; }
+      section#work ul li:last-child {
+        margin-bottom: 0; }
       section#work ul li img {
         transition: .5s;
         width: 100%; }
@@ -908,7 +923,7 @@ section#work ul::before {
   clear: both; }
 
 section#factory {
-  background-color: #F2E9AE;
+  background-color: #fcf7d8ae;
   padding: 64px 16px; }
   section#factory ul {
     display: flex;
@@ -929,7 +944,7 @@ section#factory {
         section#factory ul li div p {
           padding: 16px; }
           section#factory ul li div p.title {
-            background-color: #8FAEC7;
+            background-color: #8faec79f;
             color: #000000;
             padding: 32px; }
           section#factory ul li div p:last-child {
@@ -952,7 +967,7 @@ section#factory ul::before {
   clear: both; }
 
 section#contact {
-  background-color: #FFFFFF;
+  background-color: #f2e9ae8c;
   padding: 64px 16px; }
   section#contact .row {
     display: flex;
@@ -994,7 +1009,7 @@ section#contact {
       text-align: center;
       margin-top: 8px; }
       section#contact .row form .form-submit button {
-        color: #FFFFFF;
+        color: #000000;
         background-color: #8FAEC7;
         transition: .5s; }
         section#contact .row form .form-submit button:hover {
@@ -1066,7 +1081,8 @@ h2 {
 h2 span {
   display: inline-block;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 32px; }
   h2 span::after {
     content: "";
     height: 2px;

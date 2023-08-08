@@ -1,13 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
       <title>FMC 18</title>
+
+      <!-- Meta -->
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="FMC18 est une entreprise de fabrication de moule industriel situé dans la région Centre à Méry-sur-Cher. Les moules sont adaptés pour l'injection plsatique, la cire perdue, ...">
+      <meta name="keywords" content="FMC18, FMC 18, FMC, 18, fabrication de moule, injection plastique, cire perdue, Centre, Centre-Val-de-Loire, Méry-sur-Cher, ">
+
+      <!-- CSS -->
       <link rel="stylesheet" href="./css/index.css">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+      <!-- JS -->
       <script src="https://kit.fontawesome.com/e3a21062e8.js" crossorigin="anonymous"></script>
       <script src="./js/index.js" defer></script>
+
+      <!-- JSON LD -->
+      <script type="application/ld+json">
+        {
+          "@context": "http://schema.org/",
+          "@type": "LocalBusiness",
+          "name": "FMC18",
+          "image": "",
+          "telephone": "0000000000",
+          "url": "https://fmc18.fr",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "469 route des forges, Les Penons",
+            "addressLocality": "Méry-sur-Cher",
+            "addressRegion": "Cher(18) / Centre-Val-de-Loire",
+            "postalCode": "18100",
+            "addressCountry": "France"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "07:30",
+              "closes": "17:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Friday"],
+              "opens": "07:30",
+              "closes": "12:00"
+            }
+          ]
+        }
+      </script>
   </head>
   <body>
 
@@ -45,15 +87,15 @@
         </ul>
         
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-        <a href="javascript:void(0)" class="float-right hide-large hide-medium" onclick="openSidebar()">
+        <button class="float-right hide-large hide-medium" onclick="openSidebar()">
           <i class="fa fa-bars"></i>
-        </a>
+        </button>
       </nav>
     </header>
 
     <!-- Sidebar on small screens when clicking the menu icon -->
     <nav class="sidebar card hide-medium hide-large" style="display:none" id="sidebar">
-      <a href="javascript:void(0)" onclick="closeSidebar()" class="text-large padding-16">Fermer ×</a>
+      <button onclick="closeSidebar()" class="text-large padding-16">Fermer ×</button>
       <a href="#about" onclick="closeSidebar()">A propos</a>
       <a href="#team" onclick="closeSidebar()">L'équipe</a>
       <a href="#work" onclick="closeSidebar()">Nos réalisation</a>
@@ -62,15 +104,17 @@
     </nav>
 
     <section id="home">
-      <div style="padding:48px">
-        <h1 class="hide-small">FMC 18</h1><br>
-        <span class="text-xxlarge hide-large hide-medium">FMC 18</span><br>
-        <span class="text-large">Fabrication de moules du Centre.</span>
-        <p>
-          <a href="#about" class="button padding-large text-large margin-top">
-            En savoir plus
-          </a>
-        </p>
+      <div class="container">
+        <div class="col">
+          <h1 class="hide-small">FMC 18</h1>
+          <span class="text-xxlarge hide-large hide-medium h1">FMC 18</span>
+          <span class="text-large text-bold">Fabrication de moules du Centre.</span>
+          <p>
+            <a href="#about" class="button padding-large text-large margin-top">
+              En savoir plus
+            </a>
+          </p>
+        </div>
       </div>
     </section>
 
@@ -120,9 +164,9 @@
               <p class="opacity">0 poste(s) proposé(s)</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
               <p>
-                <button class="button">
+                <a href="#contact" class="button">
                   <i class="fa fa-envelope"></i> Postuler
-                </button>
+                </a>
               </p>
             </div>
           </div>
@@ -134,9 +178,9 @@
               <p class="opacity">0 poste(s) proposé(s)</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
               <p>
-                <button class="button">
+                <a href="#contact" class="button">
                   <i class="fa fa-envelope"></i> Postuler
-                </button>
+                </a>
               </p>
             </div>
           </div>
@@ -148,9 +192,9 @@
               <p class="opacity">0 poste(s) proposé(s)</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
               <p>
-                <button class="button">
+                <a href="#contact" class="button">
                   <i class="fa fa-envelope"></i> Postuler
-                </button>
+                </a>
               </p>
             </div>
           </div>
@@ -162,9 +206,9 @@
               <p class="opacity">0 poste(s) proposé(s)</p>
               <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
               <p>
-                <button class="button">
+                <a href="#contact" class="button">
                   <i class="fa fa-envelope"></i> Postuler
-                </button>
+                </a>
               </p>
             </div>
           </div>
@@ -203,31 +247,31 @@
 
       <ul>
         <li>
-          <img src="" onclick="onClick(this)" alt="A microphone">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="A phone">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="A drone">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="Soundbox">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
       </ul>
 
       <ul>
         <li>
-          <img src="" onclick="onClick(this)" alt="A tablet">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="A camera">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="A typewriter">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
         <li>
-          <img src="" onclick="onClick(this)" alt="A tableturner">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
         </li>
       </ul>
     </section>
@@ -236,7 +280,7 @@
     <div id="modal" class="modal" onclick="this.style.display='none'">
       <span class="button" title="Fermer l'aperçu">×</span>
       <div class="modal-content">
-        <img id="img">
+        <img id="img" loading="lazy" alt="Version zoomé de l'image">
         <p id="caption"></p>
       </div>
     </div>
@@ -289,11 +333,10 @@
             <i class="fa fa-envelope fa-fw"> </i> Email&nbsp;:&nbsp;<a href="mailto:mail@mail.com">mail@mail.com</a>
           </li>
           <li>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.158772960289!2d1.964184375391725!3d47.2525985123574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fb27939bddeeaf%3A0xec90f56e861191c2!2sFabrication%20de%20Moule%20du%20Centre%2018!5e0!3m2!1sfr!2sfr!4v1691482187290!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <!-- <img src="" alt="Position géographique FMC18"> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.158772960289!2d1.964184375391725!3d47.2525985123574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fb27939bddeeaf%3A0xec90f56e861191c2!2sFabrication%20de%20Moule%20du%20Centre%2018!5e0!3m2!1sfr!2sfr!4v1691482187290!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Situation géographique FMC18"></iframe>
           </li>
         </ul>
-        <form action="/action_page.php" target="_blank" class="col">
+        <form id="form" class="col">
           <p><input type="text" placeholder="Nom - Prénom" required name="name"></p>
           <p><input type="text" placeholder="Email" required name="email"></p>
           <p><input type="text" placeholder="Société" name="society"></p>

@@ -18,4 +18,23 @@ document.addEventListener('DOMContentLoaded', () => {
   closeSidebar = () => {
     sidebar.style.display = 'none';
   }
+
+
+  // Form submit management - Send mail
+  // const form = document.getElementById('form');
+  document.getElementById('form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = Object.fromEntries(new FormData(e.target));
+
+    const subject = formData.subject;
+    const society = formData?.society ? ` (${ formData?.society })` : '';
+    const message = `
+      Nouvelle demande de contact de la part de ${ formData.name } ${ society } \n
+      Email : ${ formData.email } \n
+      Objet de la demande : ${ subject } \n
+      Message : \n
+      ${ formData.message }
+    `;
+
+  });
 });
