@@ -45,20 +45,20 @@
         </ul>
         
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-        <a href="javascript:void(0)" class="float-right hide-large hide-medium" onclick="open()">
+        <a href="javascript:void(0)" class="float-right hide-large hide-medium" onclick="openSidebar()">
           <i class="fa fa-bars"></i>
         </a>
       </nav>
     </header>
 
     <!-- Sidebar on small screens when clicking the menu icon -->
-    <nav class="navbar card hide-medium hide-large" style="display:none" id="navbar">
-      <a href="javascript:void(0)" onclick="close()" class="text-large padding-16">Fermer ×</a>
-      <a href="#about" onclick="close()">A propos</a>
-      <a href="#team" onclick="close()">L'équipe</a>
-      <a href="#work" onclick="close()">Nos réalisation</a>
-      <a href="#factory" onclick="close()">L'atelier</a>
-      <a href="#contact" onclick="close()">Nous contacter</a>
+    <nav class="navbar card hide-medium hide-large" style="display:none" id="sidebar">
+      <a href="javascript:void(0)" onclick="closeSidebar()" class="text-large padding-16">Fermer ×</a>
+      <a href="#about" onclick="closeSidebar()">A propos</a>
+      <a href="#team" onclick="closeSidebar()">L'équipe</a>
+      <a href="#work" onclick="closeSidebar()">Nos réalisation</a>
+      <a href="#factory" onclick="closeSidebar()">L'atelier</a>
+      <a href="#contact" onclick="closeSidebar()">Nous contacter</a>
     </nav>
 
     <section id="home">

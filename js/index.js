@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Toggle between showing and hiding the sidebar when clicking the menu icon
-  const navbar = document.getElementById('navbar');
+  const sidebar = document.getElementById('sidebar');
 
-  open = () => {
-    navbar.style.display = navbar.style.display === 'block' ? 'none' : 'block';
+  openSidebar = () => {
+    sidebar.style.display = sidebar.style.display === 'block' ? 'none' : 'block';
   }
 
   // Close the sidebar with the close button
-  close = () => {
-    mySidebar.style.display = 'none';
+  closeSidebar = () => {
+    sidebar.style.display = 'none';
   }
 });
