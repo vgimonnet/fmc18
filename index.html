@@ -1,97 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FMC 18</title>
-    <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#accueil">
-                        <img src="./public/logo.png" alt="FMC 18 - Logo" loading="lazy">
-                    </a>
-                </li>
-                <li>
-                    <a href="#atelier">
-                        L'atelier
-                    </a>
-                </li>
-                <li>
-                    <a href="#equipe">
-                        L'équipe
-                    </a>
-                </li>
-                <li>
-                    <a href="#realisation">
-                        Nos réalisations
-                    </a>
-                </li>
-                <li>
-                    <a href="#contact">
-                        Nous contacter
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="accueil">
+<html>
+  <head>
+      <title>FMC 18</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="./css/index.css">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+      <script src="https://kit.fontawesome.com/e3a21062e8.js" crossorigin="anonymous"></script>
+      <script src="./js/index.js" defer></script>
+  </head>
+  <body>
 
-        </section>
-        <section id="atelier">
-            <h2>
-                L'atelier
-            </h2>
-        </section>
-        <section id="equipe">
-            <h2>
-                L'équipe
-            </h2>
-        </section>
-        <section id="realisation">
-            <h2>
-                Nos réalisations
-            </h2>
-        </section>
-        <section id="contact">
-            <h2>
-                Nous contacter
-            </h2>
-            <form>
-                <div>
-                    <label for="nom">Nom</label>
-                    <input type="text" name="nom" id="nom" placeholder="Nom" required>
-                </div>
-                <div>
-                    <label for="prenom">Prénom</label>
-                    <input type="text" name="prenom" id="prenom" placeholder="Prénom" required>
-                </div>
-                <div>
-                    <label for="societe">Société</label>
-                    <input type="text" name="societe" id="societe" placeholder="Société" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="email@email.com" required>
-                </div>
-                <div>
-                    <label for="sujet">Sujet</label>
-                    <input type="text" name="sujet" id="sujet" placeholder="sujet" required>
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer>
-        FMC18 - <script>document.write(/\d{4}/.exec(Date())[0])</script>
+    <header>
+      <nav class="card" id="navbar">
+        <a href="#home">
+          <img src="./public/logo.png" alt="FMC 18 - Logo" loading="lazy" height="25px">
+        </a>
+        <ul class="float-right hide-small d-flex">
+          <li>
+            <a href="#about">
+              A propos
+            </a>
+          </li>
+          <li>
+            <a href="#team">
+              <i class="fa fa-user"></i> L'équipe
+            </a>
+          </li>
+          <li>
+            <a href="#work">
+              <i class="fa fa-th"></i> Nos réalisations
+            </a>
+          </li>
+          <li>
+            <a href="#factory">
+              <i class="fa fa-building"></i> L'atelier
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <i class="fa fa-envelope"></i> Nous contacter
+            </a>
+          </li>
+        </ul>
+        
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a href="javascript:void(0)" class="float-right hide-large hide-medium" onclick="open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="navbar card hide-medium hide-large" style="display:none" id="navbar">
+      <a href="javascript:void(0)" onclick="close()" class="text-large padding-16">Fermer ×</a>
+      <a href="#about" onclick="close()">A propos</a>
+      <a href="#team" onclick="close()">L'équipe</a>
+      <a href="#work" onclick="close()">Nos réalisation</a>
+      <a href="#factory" onclick="close()">L'atelier</a>
+      <a href="#contact" onclick="close()">Nous contacter</a>
+    </nav>
+
+    <section id="home">
+      <div style="padding:48px">
+        <h1 class="hide-small">FMC 18</h1><br>
+        <span class="text-xxlarge hide-large hide-medium">FMC 18</span><br>
+        <span class="text-large">Fabrication de moules du Centre.</span>
+        <p>
+          <a href="#about" class="button padding-large text-large margin-top">
+            En savoir plus
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="text-center">A propos de nous</h2>
+      <p class="text-center text-large">Description générale de l'entreprise</p>
+      <ul class="text-center">
+        <li>
+          <i class="fa fa-desktop margin-bottom text-center"></i>
+          <p class="text-large">Etude</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </li>
+        <li>
+          <i class="fa fa-screwdriver-wrench margin-bottom"></i>
+          <p class="text-large">Réalisation d'outillage</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </li>
+        <li>
+          <i class="fa fa-cog margin-bottom"></i>
+          <p class="text-large">Usinage</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </li>
+        <li>
+          <i class="fa fa-handshake-angle margin-bottom"></i>
+          <p class="text-large">Support</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="team">
+      <h2 class="text-center">L'équipe</h2>
+      <p class="text-center text-large">Retrouvez ici nos différents métiers</p>
+      <ul>
+        <li class="margin-bottom">
+          <div class="card">
+            <div>
+              <h3>Dessinateur projeteur</h3>
+              <p class="opacity">0 poste(s) proposé(s)</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p>
+                <button class="button">
+                  <i class="fa fa-envelope"></i> Postuler
+                </button>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="margin-bottom">
+          <div class="card">
+            <div>
+              <h3>Programmeur</h3>
+              <p class="opacity">0 poste(s) proposé(s)</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p>
+                <button class="button">
+                  <i class="fa fa-envelope"></i> Postuler
+                </button>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="margin-bottom">
+          <div class="card">
+            <div>
+              <h3>Usineur</h3>
+              <p class="opacity">0 poste(s) proposé(s)</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p>
+                <button class="button">
+                  <i class="fa fa-envelope"></i> Postuler
+                </button>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="margin-bottom">
+          <div class="card">
+            <div>
+              <h3>Ajusteur</h3>
+              <p class="opacity">0 poste(s) proposé(s)</p>
+              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+              <p>
+                <button class="button">
+                  <i class="fa fa-envelope"></i> Postuler
+                </button>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="text-center" id="stats">
+      <ul>
+        <li>
+          <span class="text-xxlarge">20+</span>
+          <br>Années d'expériences
+        </li>
+        <li>
+          <span class="text-xxlarge">50+</span>
+          <br>Clients satisfaits
+        </li>
+        <li>
+          <span class="text-xxlarge">100+</span>
+          <br>Projets terminés
+        </li>
+        <li>
+          <span class="text-xxlarge">10+</span>
+          <br>Employés
+        </li>
+      </ul>
+    </section>
+
+    <section id="work">
+      <h3 class="text-center">Nos réalisations</h3>
+      <p class="text-center text-large">Certains projets que nous avons réalisés</p>
+
+      <ul>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A microphone">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A phone">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A drone">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="Soundbox">
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A tablet">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A camera">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A typewriter">
+        </li>
+        <li>
+          <img src="" onclick="onClick(this)" alt="A tableturner">
+        </li>
+      </ul>
+    </section>
+
+    <!-- Modal for full size images on click-->
+    <div id="modal" class="modal" onclick="this.style.display='none'">
+      <span class="button" title="Fermer l'aperçu">×</span>
+      <div class="modal-content">
+        <img id="img">
+        <p id="caption"></p>
+      </div>
+    </div>
+
+    <section class="text-center" id="factory">
+      <h3>L'atelier</h3>
+      <p class="text-large">Voici les différentes machines avec lesquelles nous travaillons dans notre atelier.</p>
+      <ul>
+        <li>
+          <div>
+            <p class="title text-xlarge">Fraiseuses</p>
+            <p><b>10</b> Machines</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro qui quo itaque, laudantium odit consequuntur ratione quisquam natus maiores corporis aut voluptatem atque quas nemo perspiciatis deserunt minus expedita explicabo.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title text-xlarge">Fraiseuses</p>
+            <p><b>10</b> Machines</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro qui quo itaque, laudantium odit consequuntur ratione quisquam natus maiores corporis aut voluptatem atque quas nemo perspiciatis deserunt minus expedita explicabo.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class="title text-xlarge">Fraiseuses</p>
+            <p><b>10</b> Machines</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro qui quo itaque, laudantium odit consequuntur ratione quisquam natus maiores corporis aut voluptatem atque quas nemo perspiciatis deserunt minus expedita explicabo.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h3 class="text-center">Nous contacter</h3>
+      <p class="text-center text-large">Prenez contact avec nous. Envoyer nous un message:</p>
+      <div class="row">
+        <ul class="col">
+          <!-- <li>
+            <i class="fa fa-map-marker fa-fw"></i> Les penons, Méry-sur-Cher 18100 - France
+          </li> -->
+          <li>
+            <i class="fa fa-phone fa-fw"></i> Téléphone: <a href="tel:+0000000000">00 00 00 00 00</a>
+          </li>
+          <li>
+            <i class="fa fa-envelope fa-fw"> </i> Email: <a href="mailto:mail@mail.com">mail@mail.com</a>
+          </li>
+          <li>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2708.158772960289!2d1.964184375391725!3d47.2525985123574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47fb27939bddeeaf%3A0xec90f56e861191c2!2sFabrication%20de%20Moule%20du%20Centre%2018!5e0!3m2!1sfr!2sfr!4v1691482187290!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- <img src="" alt="Position géographique FMC18"> -->
+          </li>
+        </ul>
+        <form action="/action_page.php" target="_blank" class="col">
+          <p><input type="text" placeholder="Nom - Prénom" required name="name"></p>
+          <p><input type="text" placeholder="Email" required name="email"></p>
+          <p><input type="text" placeholder="Société" name="society"></p>
+          <p><input type="text" placeholder="Objet" required name="object"></p>
+          <p><textarea cols="30" rows="10" placeholder="Message" required name="message"></textarea></p>
+            
+          <p class="form-submit">
+            <button class="button" type="submit">
+              <i class="fa fa-paper-plane"></i> Envoyer
+            </button>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="text-center">
+      <a href="#home" class="button">
+        <i class="fa fa-arrow-up margin-right"></i> Haut de page
+      </a>
+      <p class="margin">
+        FMC 18 - <script>document.write(/\d{4}/.exec(Date())[0])</script>
+      </p>
     </footer>
-</body>
+
+  </body>
 </html>

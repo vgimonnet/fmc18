@@ -1,2 +1,5 @@
 scss/
 node_modules/
+example.html
+package.json
+pnpm-lock.yaml
