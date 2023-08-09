@@ -995,7 +995,7 @@ section#contact {
           color: #8FAEC7; }
         section#contact .row ul li iframe {
           width: 100%; }
-    section#contact .row form input, section#contact .row form textarea {
+    section#contact .row form input[type=text], section#contact .row form input[type=mail], section#contact .row form textarea {
       padding: 8px;
       display: block;
       border: none;
@@ -1005,6 +1005,12 @@ section#contact {
       height: 54px; }
     section#contact .row form textarea {
       height: 300px; }
+    section#contact .row form .cgu {
+      margin: 16px auto; }
+      section#contact .row form .cgu a {
+        transition: .5s; }
+        section#contact .row form .cgu a:hover {
+          color: #8FAEC7; }
     section#contact .row form .form-submit {
       text-align: center;
       margin-top: 8px; }

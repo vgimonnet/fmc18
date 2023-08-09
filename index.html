@@ -338,11 +338,15 @@
           </li>
         </ul>
         <form id="form" class="col">
-          <p><input type="text" placeholder="Nom - Prénom" required name="name"></p>
-          <p><input type="text" placeholder="Email" required name="email"></p>
+          <p><input type="text" placeholder="Nom - Prénom (obligatoire)" required name="name"></p>
+          <p><input type="mail" placeholder="Email (obligatoire)" required name="email"></p>
           <p><input type="text" placeholder="Société" name="society"></p>
-          <p><input type="text" placeholder="Objet" required name="object"></p>
-          <p><textarea cols="30" rows="10" placeholder="Message" required name="message"></textarea></p>
+          <p><input type="text" placeholder="Objet (obligatoire)" required name="object"></p>
+          <p><textarea cols="30" rows="10" placeholder="Message (obligatoire)" required name="message"></textarea></p>
+          
+          <p class="cgu text-center">
+            En cliquant sur "Envoyer", vous acceptez les&nbsp;<a href="./public/cgu-fmc18.pdf" target="_blank">conditions générales d'utilisations</a>.
+          </p>
             
           <p class="form-submit">
             <button 

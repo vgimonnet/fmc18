@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   onSubmit = (token) => {
     const formData = Object.fromEntries(new FormData(document.getElementById('form')));
-    const society = formData?.society ? ` (${ formData?.society })` : '';
+    const society = formData?.society ? `(${ formData?.society })` : '';
 
     const data = {
       service_id: 'service_y15exl9',
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
           'name': formData.name,
           society,
           'message': formData.message,
-          'subject': formData.subject,
+          'subject': formData.object,
           'g-recaptcha-response': token,
       }
     };
@@ -85,6 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => {
       alert('Echec de l\'envoi du mail. Vous pouvez réessayer ou bien nous contacter directement depuis notre adresse mail.');
-    })
+    });
   }
 });
