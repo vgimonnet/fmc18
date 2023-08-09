@@ -15,6 +15,7 @@
 
       <!-- JS -->
       <script src="https://kit.fontawesome.com/e3a21062e8.js" crossorigin="anonymous"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <script src="./js/index.js" defer></script>
 
       <!-- JSON LD -->
@@ -344,7 +345,12 @@
           <p><textarea cols="30" rows="10" placeholder="Message" required name="message"></textarea></p>
             
           <p class="form-submit">
-            <button class="button" type="submit">
+            <button 
+              class="button g-recaptcha" 
+              data-sitekey="6LcvPZEnAAAAABcFZNsadl7RiAEHdth4Wm1c1h08"
+              data-callback="onSubmit"
+              type="submit"
+            >
               <i class="fa fa-paper-plane"></i> Envoyer
             </button>
           </p>
