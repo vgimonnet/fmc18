@@ -832,10 +832,12 @@ section#team {
           section#team ul li .card div .opacity {
             opacity: 0.60; }
           section#team ul li .card div button, section#team ul li .card div a {
+            margin-top: 16px;
+            margin-bottom: 12px;
             display: block;
             width: 100%;
             background-color: #FFFFFF;
-            transition: .5; }
+            transition: .5s; }
             section#team ul li .card div button:hover, section#team ul li .card div a:hover {
               background-color: #F2E9AE; }
       section#team ul li button {
