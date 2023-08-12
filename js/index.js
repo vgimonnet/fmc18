@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Modal Image Gallery
   onClick = (element) => {
     setImage(element);
-    modal.style.display = 'block';
+    modal.style.display = 'flex';
   }
 
   closeModal = (element) => {
