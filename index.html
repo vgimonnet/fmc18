@@ -117,6 +117,7 @@
           <h1 class="hide-small">FMC 18</h1>
           <span class="text-xxlarge hide-large hide-medium h1">FMC 18</span>
           <span class="text-large text-bold">Fabrication de moules du Centre.</span>
+          <!-- <span class="text-large text-bold">Modeler le monde de demain.</span> -->
           <p>
             <a href="#about" class="button padding-large text-large margin-top">
               En savoir plus
@@ -255,41 +256,45 @@
 
       <ul>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 1" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 2" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 3" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 4" loading="lazy" class="img">
         </li>
       </ul>
 
       <ul>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 5" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 6" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 7" loading="lazy" class="img">
         </li>
         <li>
-          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule" loading="lazy">
+          <img src="./public/work1.jpg" onclick="onClick(this)" alt="Moule 8" loading="lazy" class="img">
         </li>
       </ul>
     </section>
 
     <!-- Modal for full size images on click-->
-    <div id="modal" class="modal" onclick="this.style.display='none'">
-      <span class="button" title="Fermer l'aperçu">×</span>
+    <div id="modal" class="modal">
+      <span class="button" title="Fermer l'aperçu" onclick="closeModal()">×</span>
       <div class="modal-content">
         <img id="img" loading="lazy" alt="Version zoomé de l'image">
         <p id="caption"></p>
+        <div>
+          <button onclick="prevImg()" title="Image précédente"><</button>
+          <button onclick="nextImg()" title="Image suivante">></button>
+        </div>
       </div>
     </div>
 
