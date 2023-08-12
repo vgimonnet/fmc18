@@ -595,7 +595,7 @@ h1 {
 .padding-top-24 {
   padding-top: 24px !important; }
 
-@media (max-width: 600px) {
+@media (max-width: 730px) {
   .hide-small {
     display: none !important; } }
 
@@ -603,7 +603,7 @@ h1 {
   .hide-large {
     display: none !important; } }
 
-@media (max-width: 992px) and (min-width: 601px) {
+@media (max-width: 992px) and (min-width: 731px) {
   .hide-medium {
     display: none !important; } }
 
@@ -765,6 +765,7 @@ section#home {
   position: relative;
   filter: grayscale(50%); }
   section#home div.container {
+    width: 100%;
     position: absolute;
     top: 50%;
     left: 0%;
@@ -788,6 +789,10 @@ section#home {
     section#home a:hover {
       opacity: 1;
       background-color: #75B3E4; }
+
+@media (min-width: 730px) {
+  section#home div.container {
+    width: unset; } }
 
 section#about {
   padding: 64px 16px;
